@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <!-- Обязательные стили и скрипты -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <script src="../static/js/graph.js"></script>c
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <nav class="left-menu">
+        <h2 class="menu-title">Меню</h2>
+        <ul class="menu-list">
+            
+            {% for item in menu_items %}
+            <li class="menu-item"><a href="{{ item.endpoint }}" class="menu-link">{{ item.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Граф с сохранением</title>
+</head>
+<body>
+    <div id="controls">
+        <button class="btn" onclick="saveGraph()">Сохранить граф</button>
+        <input type="file" id="loadInput" accept=".json" style="display: none;">
+        <button class="btn" onclick="document.getElementById('loadInput').click()">Загрузить граф</button>
+    </div>
+    
+    <svg id="graph"></svg>
+    
+    <!-- Меню создания узлов -->
+    <div id="createMenu" class="context-menu">
+        <div class="context-menu-item" data-type="circle">Круг</div>
+        <div class="context-menu-item" data-type="square">Квадрат</div>
+        <div class="context-menu-item" data-type="triangle">Треугольник</div>
+    </div>
+
+    <!-- Меню действий с узлом -->
+    <div id="nodeMenu" class="context-menu">
+        <div class="context-menu-item" data-action="rename">Переименовать</div>
+        <div class="context-menu-item" data-action="delete">Удалить узел</div>
+        <div class="context-menu-item" data-action="remove-connections">Удалить связи</div>
+    </div>
+</body>
+</html>

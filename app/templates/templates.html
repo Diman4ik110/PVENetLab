@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block title %}Шаблоны{% endblock %}
+
+{% block content %}
+    {% for vm in vms %}
+    <p>{{ vm.node }}</p>
+    {% endfor %}
+    <h1>Здесь будут шаблоны из PVE</h1>
+{% endblock %}
